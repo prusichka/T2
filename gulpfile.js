@@ -43,7 +43,7 @@ function styles() {
 async function images() {
   imagecomp(
     "app/img/src/**/*",
-    "app/img/dest/",
+    "app/img/src/",
     { compress_force: false, statistic: true, autoupdate: true },
     false,
     { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } },
@@ -69,7 +69,7 @@ function scripts() {
 }
 
 function cleanimg() {
-  return del("app/img/dest/**/*", { force: true });
+  return del("app/img/src/**/*", { force: true });
 }
 
 function startWatch() {
@@ -84,7 +84,7 @@ function startWatch() {
 }
 
 function buildcopy() {
-  return src(["app/css/**/*.min.css", "app/img/dest/**/*", "app/**/*.html"], {
+  return src(["app/css/**/*.min.css", "app/img/src/**/*", "app/**/*.html"], {
     base: "app",
   }).pipe(dest("dist"));
 }
