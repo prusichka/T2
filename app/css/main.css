@@ -12,7 +12,7 @@ ol[class] {
 ul {
   list-style: none;
 }
-input  {
+input {
   padding: 0;
 }
 
@@ -344,13 +344,13 @@ form {
   font-size: 22px;
   line-height: 30px;
   letter-spacing: 0.846154px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 70px;
 }
 #email {
   outline: none;
   margin: 0;
-  padding:10px 25px ;
+  padding: 10px 25px;
   border: none;
 }
 .form button {
@@ -361,6 +361,112 @@ form {
   margin: 0;
   width: 160px;
 }
+
+footer {
+  background-color: #141a20;
+  padding: 40px 0;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-nav {
+  letter-spacing: 0.85px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.846154px;
+  color: #ffffff;
+}
+.footer-item {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+.footer-item a {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 0.846154px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-item a:hover {
+  color: #00a4e5;
+}
+.footer-mobile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.underline {
+  padding: 5px 0;
+  border-bottom: 2px solid rgb(81, 93, 117);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-mobile {
+  display: none;
+}
+#footer-1,
+#footer-2 {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+#false1,
+#false2 {
+  display: none;
+}
+#open1,
+#open2 {
+  display: none;
+}
+#open1:checked ~ #footer-1 {
+  display: flex;
+}
+#open1:checked ~ label #true1 {
+  display: none;
+}
+#open1:checked ~ label #false1 {
+  display: flex;
+}
+#open2:checked ~ #footer-2 {
+  display: flex;
+}
+#open2:checked ~ label #true2 {
+  display: none;
+}
+#open2:checked ~ label #false2 {
+  display: flex;
+}
+.footer-mobile-item li{
+  letter-spacing: 0.85px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 19px;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
 @media screen and (max-width: 961px) {
   .container {
     width: 100%;
@@ -404,6 +510,13 @@ form {
   }
   .card {
     margin: 20px;
+  }
+  .punkt-footer-menu {
+    display: none;
+  }
+  .footer-mobile {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -458,5 +571,11 @@ form {
   }
   .capabilities-info h1 {
     text-align: center;
+  }
+  .punkt-footer-menu-2 {
+    display: none;
+  }
+  .footer-row {
+    display: flex;
   }
 }
